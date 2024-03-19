@@ -39,6 +39,6 @@ class RequestController extends Controller
             'ip'
         ];
 
-        return view('request.confirm', compact($variables));
+        return view('requests.confirm', compact($variables));
     }
 }
