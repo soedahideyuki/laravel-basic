@@ -17,12 +17,12 @@
     </ul>
   </div>
   @endif
-  
+
   <form action="{{ route('vendors.store') }}" method="POST">
     @csrf
     <table>
       <tr>
-        <th>仕入れ先code</th>
+        <th>仕入れ先コード</th>
         <td>
           <input type="number" name="vendor_code">
         </td>
