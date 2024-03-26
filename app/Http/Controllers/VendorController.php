@@ -23,7 +23,7 @@ class VendorController extends Controller
     public function store(Request $request){
         //バリデーしょんの設定
         $request->validate([
-            'vendor_code' => 'required|inteder|min:0|unique:vendors,vendor_code',
+            'vendor_code' => 'required|integer|min:0|unique:vendors,vendor_code',
             'vender_name' => 'required|max:255'
         ]);
 
