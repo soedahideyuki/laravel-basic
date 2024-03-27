@@ -45,8 +45,8 @@ Route::get('/products/create', [ProductController::class, 'create']);
 Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
 Route::get('/products/{id}', [ProductController::class, 'show']);
 
-Route::get('/vendors/create', [VendorController::class, 'create']);
-Route::post('/vendors/store', [VendorController::class, 'store'])->name('vendors.store');
+Route::get('/vendors/create', [VendorController::class, 'create'])->middleware('auth');
+Route::post('/vendors/store', [VendorController::class, 'store'])->name('vendors.store')->middleware('auth');
 Route::get('/vendors/{id}', [VendorController::class, 'show']);
 
 Route::get('/requests/create', [RequestController::class, 'create']);
